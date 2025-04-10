@@ -1,0 +1,16 @@
+{
+	"name": "MySqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MySqlLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`admissions`"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

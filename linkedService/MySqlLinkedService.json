@@ -1,0 +1,30 @@
+{
+	"name": "MySqlLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "MySql",
+		"typeProperties": {
+			"server": "localhost",
+			"port": 3306,
+			"database": "Healthcare",
+			"username": "tempemp002",
+			"sslMode": 1,
+			"useSystemTrustStore": 0,
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultMySQL",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "090425SQLPwd",
+				"secretVersion": "72723eca7e014fc398af874ca39ccc0e"
+			},
+			"driverVersion": "v2"
+		},
+		"connectVia": {
+			"referenceName": "OnPremintegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"name": "OnPremintegrationRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "This Integration Runtime for On-Prem to Azure"
+	}
+}

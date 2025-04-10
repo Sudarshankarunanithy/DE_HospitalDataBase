@@ -1,0 +1,9 @@
+{
+	"name": "HealthcareDataFactorySelf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c8a6e6dc-8192-4ad1-96c7-1181b6969823",
+		"tenantId": "0a672d5e-e0ff-4510-9f1f-3ae5f245cb8b"
+	}
+}
