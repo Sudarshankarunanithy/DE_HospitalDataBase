@@ -1,0 +1,41 @@
+{
+	"name": "ParquetAdmission",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageAdmission",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Admission_ID",
+				"type": "INT32"
+			},
+			{
+				"name": "Patient_ID",
+				"type": "INT32"
+			},
+			{
+				"name": "admission_date",
+				"type": "INT96"
+			},
+			{
+				"name": "Doctor_ID",
+				"type": "INT32"
+			},
+			{
+				"name": "Reason_for_Visit",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

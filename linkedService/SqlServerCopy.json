@@ -1,0 +1,29 @@
+{
+	"name": "SqlServerCopy",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost",
+			"database": "healthcare",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "tempemp002",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultMySQL",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "090425SQLPwd",
+				"secretVersion": "72723eca7e014fc398af874ca39ccc0e"
+			}
+		},
+		"connectVia": {
+			"referenceName": "OnPremintegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
